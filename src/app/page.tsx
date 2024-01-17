@@ -10,7 +10,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title: `${RESUME_DATA.name} | ${RESUME_DATA.title}`,
   description: RESUME_DATA.summary,
 };
 
@@ -87,7 +87,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="size-28 print:hidden">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -123,7 +123,7 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
+                      {work.start} - {work.end ?? new Date().getFullYear()}
                     </div>
                   </div>
 
@@ -131,8 +131,43 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
+                {work.highlight ? null : (
+                  <CardContent className="mt-2 text-xs">
+                    {work.description}
+                  </CardContent>
+                )}
+              </Card>
+            );
+          })}
+        </Section>
+        <Section className="print-force-new-page">
+          <h2 className="text-xl font-bold">Credentials</h2>
+          {RESUME_DATA.accomplishments.map((accomplishment) => {
+            return (
+              <Card key={accomplishment.accomplishment}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      <span>{accomplishment.accomplishment}</span>
+                      <span className="inline-flex gap-x-1">
+                        {accomplishment.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {accomplishment.year}
+                    </div>
+                  </div>
+                </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                  {work.description}
+                  {accomplishment.description}
                 </CardContent>
               </Card>
             );
@@ -146,30 +181,34 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="font-semibold leading-none">
-                      {education.school}
+                      <a className="hover:underline" href={education.link}>
+                        {education.school}
+                      </a>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
+                <CardContent className="mt-2 text-xs">
+                  {education.degree}
+                </CardContent>
               </Card>
             );
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold">Technologies</h2>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
-              return <Badge key={skill}>{skill}</Badge>;
+            {RESUME_DATA.technologies.map((skill) => {
+              return <Badge key={skill.skill}>{skill.skill}</Badge>;
             })}
           </div>
         </Section>
 
-        <Section className="print-force-new-page scroll-mb-16">
+        <Section className="scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-2 print:gap-2 md:grid-cols-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
@@ -177,7 +216,11 @@ export default function Page() {
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
+                  link={
+                    "link" in project && project.link
+                      ? project.link.href
+                      : undefined
+                  }
                 />
               );
             })}
