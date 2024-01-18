@@ -144,7 +144,7 @@ export default function Page() {
           })}
         </Section>
         <Section className="print-force-new-page">
-          <h2 className="text-xl font-bold">Credentials</h2>
+          <h2 className="text-xl font-bold">Accomplishments</h2>
           {RESUME_DATA.accomplishments.map((accomplishment) => {
             return (
               <Card key={accomplishment.accomplishment}>
