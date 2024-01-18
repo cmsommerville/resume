@@ -146,7 +146,7 @@ export const RESUME_DATA = {
       title: "UWToolkit",
       techStack: ["Side Project", "TypeScript", "Vite", "Ag-Grid"],
       description:
-        "Side project to build a website with local storage only to help my wife assign underwriting case work to her employees",
+        "Side project. Static web app to help spouse assign underwriter case loads. All data intentionally processed locally without a database.",
       link: {
         label: "uwtoolkit.com",
         href: "https://uwtoolkit.com/",
