@@ -64,7 +64,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2023",
       description:
-        "Built an actuarial ratemaking web application from scratch. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative, and database developer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. Technologies: React, Typescript, Django, Python, SQL",
+        "Built an actuarial ratemaking web application from scratch. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative, and database developer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. Technologies: React, Typescript, Django, Python, SQL, Azure Data Factory",
     },
     {
       company: "Aflac",
@@ -96,7 +96,7 @@ export const RESUME_DATA = {
       end: "2016",
       highlight: true,
       description:
-        "Exam taking actuary. Overhauled reserve calculation and experience studies processes by moving them out of MS Access databases and into SQL stored procedures. Financial and data analysis. Technologies: SQL, DB2, MS Excel, MS Access, VBA",
+        "Exam-taking actuary. Overhauled reserve calculation and experience studies processes by moving them out of MS Access databases and into SQL stored procedures. Financial and data analysis. Technologies: SQL, DB2, MS Excel, MS Access, VBA",
     },
   ],
   technologies: [
