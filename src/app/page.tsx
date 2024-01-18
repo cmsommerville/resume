@@ -131,11 +131,14 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                {work.highlight ? null : (
-                  <CardContent className="mt-2 text-xs">
-                    {work.description}
-                  </CardContent>
-                )}
+
+                <CardContent
+                  className={`mt-2 text-xs ${
+                    work.highlight ? "print:hidden" : ""
+                  }`}
+                >
+                  {work.description}
+                </CardContent>
               </Card>
             );
           })}
