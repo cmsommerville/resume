@@ -127,7 +127,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="flex min-w-24 justify-end text-sm tabular-nums text-gray-500">
                       {work.start} - {work.end ?? new Date().getFullYear()}
                     </div>
                   </div>
@@ -196,7 +196,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    <div className="flex min-w-16 justify-end text-sm tabular-nums text-gray-500">
                       {accomplishment.year}
                     </div>
                   </div>
@@ -236,7 +236,15 @@ export default function Page() {
           <h2 className="text-xl font-bold">Technologies</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.technologies.map((skill) => {
-              return <Badge key={skill.skill}>{skill.skill}</Badge>;
+              return (
+                <Badge key={skill.skill}>
+                  {skill.link ? (
+                    <a href={skill.link}>{skill.skill}</a>
+                  ) : (
+                    <span>{skill.skill}</span>
+                  )}
+                </Badge>
+              );
             })}
           </div>
         </Section>
