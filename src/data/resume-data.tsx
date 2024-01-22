@@ -96,7 +96,7 @@ export const RESUME_DATA = {
       end: "2016",
       highlight: true,
       description:
-        "Exam-taking actuary. Overhauled reserve calculation and experience studies processes by moving them out of MS Access databases and into SQL stored procedures. Financial and data analysis. Technologies: SQL, DB2, MS Excel, MS Access, VBA",
+        "Exam-taking actuary. Migrated actuarial data out of MS Access into DB2. Overhauled reserve calculation and experience studies processes by writing as SQL stored procedures. Financial and data analysis. Technologies: SQL, DB2, MS Excel, MS Access, VBA",
     },
   ],
   technologies: [
@@ -118,6 +118,11 @@ export const RESUME_DATA = {
     { skill: "Flask", link: "https://flask.palletsprojects.com/" },
     { skill: "Django", link: "https://www.djangoproject.com/" },
     { skill: "pandas", link: "https://pandas.pydata.org/" },
+    { skill: "SQLAlchemy", link: "https://www.sqlalchemy.org/" },
+    {
+      skill: "DRF",
+      link: "https://www.django-rest-framework.org/",
+    },
     { skill: "TypeScript", link: "https://www.typescriptlang.org/" },
     {
       skill: "JavaScript",
