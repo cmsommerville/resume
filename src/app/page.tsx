@@ -20,9 +20,16 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between border-b pb-2">
           <div className="flex-1 space-y-1.5 print:grid print:grid-cols-3">
-            <h1 className="text-2xl font-bold print:col-span-2 print:self-end">
-              {RESUME_DATA.name}
-            </h1>
+            <div className="print:col-span-2 print:self-end">
+              <h1 className="text-2xl font-bold ">{RESUME_DATA.name}</h1>
+              <p className="hidden text-pretty font-mono text-sm text-muted-foreground print:block">
+                {RESUME_DATA.contact.tel ? (
+                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                    <span className="underline">{RESUME_DATA.contact.tel}</span>
+                  </a>
+                ) : null}
+              </p>
+            </div>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.about}
             </p>
@@ -76,14 +83,16 @@ export default function Page() {
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:col-span-1 print:flex print:text-right">
+              {RESUME_DATA.personalWebsiteUrl ? (
+                <a href={RESUME_DATA.personalWebsiteUrl}>
+                  <span className="underline">
+                    {RESUME_DATA.personalWebsiteUrl}
+                  </span>
+                </a>
+              ) : null}
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
             </div>
@@ -234,7 +243,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Technologies</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 print:gap-0">
             {RESUME_DATA.technologies.map((skill) => {
               return (
                 <Badge key={skill.skill}>
@@ -270,7 +279,6 @@ export default function Page() {
           </div>
         </Section>
       </section>
-
       <CommandMenu
         links={[
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({

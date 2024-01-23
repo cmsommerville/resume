@@ -11,7 +11,7 @@ export const RESUME_DATA = {
   summary:
     "As an actuarial technologist, I specialize in building data solutions that work for actuaries. I've taken multiple actuarial data warehouse projects from idea through execution, and I also have experience migrating complicated, Excel-based applications to modern, database-powered web applications.",
   avatarUrl: "/headshot.jpg",
-  personalWebsiteUrl: "/",
+  personalWebsiteUrl: "www.sommerville.dev",
   contact: {
     email: "cmsommerville@gmail.com",
     tel: "803-931-2600",
@@ -64,7 +64,7 @@ export const RESUME_DATA = {
       start: "2020",
       end: "2023",
       description:
-        "Built an actuarial ratemaking web application from scratch. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative, and database developer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. Technologies: React, Typescript, Django, Python, SQL, Azure Data Factory",
+        "Built an actuarial ratemaking web application from scratch. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative development, and data engineer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. Technologies: React, Typescript, Django, Python, SQL, Azure Data Factory",
     },
     {
       company: "Aflac",
@@ -105,6 +105,10 @@ export const RESUME_DATA = {
       skill: "MS SQL Server",
       link: "https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16",
     },
+    {
+      skill: "Azure SQL DB",
+      link: "https://azure.microsoft.com/en-us/products/azure-sql/database/",
+    },
     { skill: "Oracle", link: "https://www.oracle.com/database/technologies/" },
     { skill: "Postgres", link: "https://www.postgresql.org/" },
     { skill: "DB2", link: "https://www.ibm.com/products/db2/database" },
@@ -113,6 +117,10 @@ export const RESUME_DATA = {
     {
       skill: "Azure Data Factory",
       link: "https://azure.microsoft.com/en-us/products/data-factory",
+    },
+    {
+      skill: "AWS",
+      link: "https://aws.amazon.com/",
     },
     { skill: "Python", link: "https://www.python.org" },
     { skill: "Flask", link: "https://flask.palletsprojects.com/" },
@@ -160,6 +168,7 @@ export const RESUME_DATA = {
         "API Gateway",
         "Lambda",
         "SES",
+        "S3",
       ],
       description:
         "Consulting business website to test Next.js and deployment to AWS with simple email service",
