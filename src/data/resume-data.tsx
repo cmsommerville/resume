@@ -11,7 +11,7 @@ export const RESUME_DATA = {
   summary:
     "As an actuarial technologist, I specialize in building data solutions that work for actuaries. I've taken multiple actuarial data warehouse projects from idea through execution, and I also have experience migrating complicated, Excel-based applications to modern, database-powered web applications.",
   avatarUrl: "/headshot.jpg",
-  personalWebsiteUrl: "www.sommerville.dev",
+  personalWebsiteUrl: "https://www.sommerville.dev",
   contact: {
     email: "cmsommerville@gmail.com",
     tel: "803-931-2600",

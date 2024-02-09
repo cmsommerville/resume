@@ -7,11 +7,14 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.title}`,
   description: RESUME_DATA.summary,
+};
+
+const removeProtocol = (url: string) => {
+  return url.replace(/^https?\:\/\//i, "");
 };
 
 export default function Page() {
@@ -86,7 +89,7 @@ export default function Page() {
               {RESUME_DATA.personalWebsiteUrl ? (
                 <a href={RESUME_DATA.personalWebsiteUrl}>
                   <span className="underline">
-                    {RESUME_DATA.personalWebsiteUrl}
+                    {removeProtocol(RESUME_DATA.personalWebsiteUrl)}
                   </span>
                 </a>
               ) : null}
