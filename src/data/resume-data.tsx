@@ -21,11 +21,6 @@ export const RESUME_DATA = {
         url: "https://github.com/cmsommerville",
         icon: GitHubIcon,
       },
-      {
-        name: "X",
-        url: "https://x.com/chansommerville",
-        icon: XIcon,
-      },
     ],
   },
   education: [
@@ -117,6 +112,18 @@ export const RESUME_DATA = {
     {
       skill: "Azure Data Factory",
       link: "https://azure.microsoft.com/en-us/products/data-factory",
+    },
+    {
+      skill: "ADLS",
+      link: "https://azure.microsoft.com/en-us/products/storage/data-lake-storage/",
+    },
+    {
+      skill: "Azure Blob",
+      link: "https://azure.microsoft.com/en-us/products/storage/blobs",
+    },
+    {
+      skill: "Docker",
+      link: "https://www.docker.com/",
     },
     {
       skill: "AWS",
