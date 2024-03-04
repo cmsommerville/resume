@@ -24,14 +24,7 @@ export default function Page() {
         <div className="flex items-center justify-between border-b pb-2">
           <div className="flex-1 space-y-1.5 print:grid print:grid-cols-3">
             <div className="print:col-span-2 print:self-end">
-              <h1 className="text-2xl font-bold ">{RESUME_DATA.name}</h1>
-              <p className="hidden text-pretty font-mono text-sm text-muted-foreground print:block">
-                {RESUME_DATA.contact.tel ? (
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <span className="underline">{RESUME_DATA.contact.tel}</span>
-                  </a>
-                ) : null}
-              </p>
+              <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
             </div>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.about}
@@ -86,11 +79,9 @@ export default function Page() {
               ))}
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:col-span-1 print:flex print:text-right">
-              {RESUME_DATA.personalWebsiteUrl ? (
-                <a href={RESUME_DATA.personalWebsiteUrl}>
-                  <span className="underline">
-                    {removeProtocol(RESUME_DATA.personalWebsiteUrl)}
-                  </span>
+              {RESUME_DATA.contact.tel ? (
+                <a href={`tel:${RESUME_DATA.contact.tel}`}>
+                  <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
               {RESUME_DATA.contact.email ? (

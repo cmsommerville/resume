@@ -26,7 +26,7 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Georgia Institute of Technology",
-      degree: "Bachelor's Degree in Applied Mathematics",
+      degree: "B.S. Applied Mathematics",
       link: "https://www.gatech.edu",
       start: "2003",
       end: "2007",
@@ -49,17 +49,17 @@ export const RESUME_DATA = {
       start: "2023",
       end: null,
       description:
-        "Design a data model to integrate billing, claims, compensation, policy, and other data sources into a cohesive data model, suitable for actuarial use cases. Liaise between IT and actuarial teams to execute on the data strategy. Technologies: SQL, MS SQL Server, Python",
+        "Design a data model to integrate billing, claims, compensation, policy, and other data sources into a cohesive data model, suitable for actuarial use cases. Liaise between IT and actuarial teams to execute on the data strategy. ",
     },
     {
       company: "American Modern Insurance Group",
       link: "https://www.amig.com",
       badges: ["Remote"],
-      title: "Principal Data Engineer / Software Engineer",
+      title: "Principal Data Engineer",
       start: "2020",
       end: "2023",
       description:
-        "Built an actuarial ratemaking web application from scratch. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative development, and data engineer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. Technologies: React, Typescript, Django, Python, SQL, Azure Data Factory",
+        "Built an actuarial ratemaking web application using React and Django. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative development, and data engineer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. ",
     },
     {
       company: "Aflac",
@@ -69,7 +69,7 @@ export const RESUME_DATA = {
       start: "2017",
       end: "2020",
       description:
-        "Built an actuarial data warehouse to support fine-grained actuarial analysis. Migrated legacy data sets from DB2. Developed ETL jobs. Trained and deployed machine learning models to enrich the data model. Technologies: SQL, R, Teradata",
+        "Built an actuarial data warehouse to support fine-grained actuarial analysis. Migrated legacy data sets from DB2 to Teradata. Developed ETL jobs. Trained and deployed machine learning models to enrich the data model. ",
     },
     {
       company: "Medical University of South Carolina",
@@ -80,7 +80,7 @@ export const RESUME_DATA = {
       end: "2017",
       highlight: true,
       description:
-        "Used data to drive evidence-based medicine practices in the hospital. Statistical analysis (OLS, GLM, LASSO) to measure efficacy. Technologies: SQL, R, SAS",
+        "Used data to drive evidence-based medicine practices in the hospital. Statistical analysis (OLS, GLM, LASSO) to measure efficacy. ",
     },
     {
       company: "Aflac",
@@ -91,7 +91,7 @@ export const RESUME_DATA = {
       end: "2016",
       highlight: true,
       description:
-        "Exam-taking actuary. Migrated actuarial data out of MS Access into DB2. Overhauled reserve calculation and experience studies processes by writing as SQL stored procedures. Financial and data analysis. Technologies: SQL, DB2, MS Excel, MS Access, VBA",
+        "Exam-taking actuary. Migrated actuarial data out of MS Access into DB2. Overhauled reserve calculation and experience studies processes by writing as SQL stored procedures. Financial and data analysis. ",
     },
   ],
   technologies: [
