@@ -25,6 +25,12 @@ export default function Page() {
           <div className="flex-1 space-y-1.5 print:grid print:grid-cols-3">
             <div className="print:col-span-2 print:self-end">
               <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+              <a
+                href={RESUME_DATA.personalWebsiteUrl}
+                className="hidden text-pretty font-mono text-sm text-muted-foreground underline print:block"
+              >
+                {removeProtocol(RESUME_DATA.personalWebsiteUrl)}
+              </a>
             </div>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.about}
@@ -104,7 +110,9 @@ export default function Page() {
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <h2 className="print:border-b-1 text-xl font-bold">
+            Work Experience
+          </h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card
@@ -112,32 +120,40 @@ export default function Page() {
                 className={work.highlight ? "print:hidden" : ""}
               >
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
+                  <div className="flex items-center justify-between text-base">
+                    <div className="flex flex-col gap-x-2 gap-y-1.5">
+                      <h3 className="inline-flex items-center gap-x-1 font-semibold leading-none">
+                        <a className="hover:underline" href={work.link}>
+                          {work.company}
+                        </a>
 
-                      <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
-                          <Badge
-                            variant="secondary"
-                            className="align-middle text-xs"
-                            key={badge}
-                          >
-                            {badge}
-                          </Badge>
-                        ))}
-                      </span>
-                    </h3>
-                    <div className="flex min-w-24 justify-end text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? new Date().getFullYear()}
+                        <span className="inline-flex gap-x-1">
+                          {work.badges.map((badge) => (
+                            <Badge
+                              variant="secondary"
+                              className="align-middle text-xs"
+                              key={badge}
+                            >
+                              {badge}
+                            </Badge>
+                          ))}
+                        </span>
+                      </h3>
+
+                      <h4 className="font-mono text-sm leading-none">
+                        {work.title}
+                      </h4>
+                    </div>
+                    <div className="flex min-w-24 flex-col justify-end gap-y-0.5 text-right text-sm tabular-nums text-gray-500">
+                      {work.period.map((period, i) => {
+                        return (
+                          <div key={period.start}>{`${period.start} - ${
+                            period.end ?? "Present"
+                          }`}</div>
+                        );
+                      })}
                     </div>
                   </div>
-
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
                 </CardHeader>
 
                 <CardContent
@@ -169,7 +185,12 @@ export default function Page() {
                     <h4 className="space-x-2 font-mono text-xs leading-none text-gray-500">
                       <span>{work.title},</span>
                       <span className="tabular-nums">
-                        {work.start} - {work.end ?? new Date().getFullYear()}
+                        {work.period
+                          .map(
+                            (period) =>
+                              `${period.start} - ${period.end ?? "Present"}`,
+                          )
+                          .join(", ")}
                       </span>
                     </h4>
                   </div>

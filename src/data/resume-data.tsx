@@ -42,32 +42,48 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Voya Financial",
-      link: "https://www.voya.com",
-      badges: ["Remote"],
-      title: "Actuary Manager",
-      start: "2023",
-      end: null,
-      description:
-        "Design a data model to integrate billing, claims, compensation, policy, and other data sources into a cohesive data model, suitable for actuarial use cases. Liaise between IT and actuarial teams to execute on the data strategy. ",
-    },
-    {
       company: "American Modern Insurance Group",
       link: "https://www.amig.com",
       badges: ["Remote"],
       title: "Principal Data Engineer",
-      start: "2020",
-      end: "2023",
+      period: [
+        {
+          start: "2024",
+          end: null,
+        },
+        {
+          start: "2020",
+          end: "2023",
+        },
+      ],
       description:
         "Built an actuarial ratemaking web application using React and Django. Technical lead on project. Performed several development roles, including front-end, REST API, quantitative development, and data engineer roles. Actuarial liaison on enterprise data warehouse / actuarial data mart project. ",
+    },
+    {
+      company: "Voya Financial",
+      link: "https://www.voya.com",
+      badges: ["Remote"],
+      title: "Actuary Manager",
+      period: [
+        {
+          start: "2023",
+          end: "2024",
+        },
+      ],
+      description:
+        "Design a data model to integrate billing, claims, compensation, policy, and other data sources into a cohesive data model, suitable for actuarial use cases. Liaise between IT and actuarial teams to execute on the data strategy. ",
     },
     {
       company: "Aflac",
       link: "https://www.aflac.com",
       badges: ["Remote"],
       title: "Senior Actuarial Systems Consultant",
-      start: "2017",
-      end: "2020",
+      period: [
+        {
+          start: "2017",
+          end: "2020",
+        },
+      ],
       description:
         "Built an actuarial data warehouse to support fine-grained actuarial analysis. Migrated legacy data sets from DB2 to Teradata. Developed ETL jobs. Trained and deployed machine learning models to enrich the data model. ",
     },
@@ -76,8 +92,12 @@ export const RESUME_DATA = {
       link: "https://www.musc.edu",
       badges: [],
       title: "Senior Quality Analytics Consultant",
-      start: "2016",
-      end: "2017",
+      period: [
+        {
+          start: "2016",
+          end: "2017",
+        },
+      ],
       highlight: true,
       description:
         "Used data to drive evidence-based medicine practices in the hospital. Statistical analysis (OLS, GLM, LASSO) to measure efficacy. ",
@@ -87,8 +107,12 @@ export const RESUME_DATA = {
       link: "https://www.aflac.com",
       badges: [],
       title: "Actuary I - III",
-      start: "2008",
-      end: "2016",
+      period: [
+        {
+          start: "2008",
+          end: "2016",
+        },
+      ],
       highlight: true,
       description:
         "Exam-taking actuary. Migrated actuarial data out of MS Access into DB2. Overhauled reserve calculation and experience studies processes by writing as SQL stored procedures. Financial and data analysis. ",
