@@ -132,6 +132,7 @@ export const RESUME_DATA = {
     { skill: "Postgres", link: "https://www.postgresql.org/" },
     { skill: "DB2", link: "https://www.ibm.com/products/db2/database" },
     { skill: "Databricks", link: "https://www.databricks.com" },
+    { skill: "Spark", link: "https://spark.apache.org/" },
     { skill: "Teradata", link: "https://www.teradata.com" },
     {
       skill: "Azure Data Factory",
