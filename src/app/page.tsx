@@ -225,9 +225,9 @@ export default function Page() {
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
-                  {accomplishment.description}
-                </CardContent>
+                {/* <CardContent className="mt-2 text-xs">
+                  {accomplishment?.description}
+                </CardContent> */}
               </Card>
             );
           })}
