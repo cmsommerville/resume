@@ -37,7 +37,7 @@ export const RESUME_DATA = {
       accomplishment: "Associate of Society of Actuaries",
       badges: ["Former"],
       year: "2014",
-      description: "Stopped paying dues due to career shift to technical roles",
+      // description: "Stopped paying dues due to career shift to technical roles",
     },
   ],
   work: [
